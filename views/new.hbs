@@ -1,6 +1,14 @@
-<div class="container">
+<div class="container text-center" >
   <h1>Success! Please use this link:</h1>
-  <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="outputUrl" name="outputUrl" value="{{ outputUrl }}" disabled>
+  
+  <a href="{{ outputUrl }}" class="blink-opacity-100" id="outputUrl" name="outputUrl" disabled>
+    <h2 class="text mt-3">{{ outputUrl }}</h2>
+  </a>
+  
+  <a href="/" class="btn btn-primary mt-3" role="button">
+    <h4 class="textBack m-auto">back</h4>
+  </a>
+  
 </div>
 
 

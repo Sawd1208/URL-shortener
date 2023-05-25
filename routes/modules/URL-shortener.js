@@ -13,7 +13,11 @@ router.post('/generate', (req, res) => {
         return res.render('new', { outputUrl: data.shortUrl })
       } else {
         URL.create({ originalUrl: reqUrl, shortUrl })
-        return res.render('new', { outputUrl: shortUrl })
+          .then(() => {
+            return res.render('new', { outputUrl: shortUrl })
+          })
+          .catch((error) => console.log(error))
+        
       }
     })
     .catch(error => console.log(error))
